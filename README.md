@@ -4,10 +4,12 @@
 
 [![Release](https://img.shields.io/github/v/release/mopeyjellyfish/KiwiCogs)](https://img.shields.io/github/v/release/mopeyjellyfish/KiwiCogs)
 [![Build](https://github.com/mopeyjellyfish/KiwiCogs/actions/workflows/main.yml/badge.svg)](https://github.com/mopeyjellyfish/KiwiCogs/actions/workflows/main.yml)
+[![Python Version](https://img.shields.io/pypi/pyversions/kiwi-cogs.svg)](https://pypi.org/project/kiwi-cogs)
 [![codecov](https://codecov.io/gh/mopeyjellyfish/KiwiCogs/branch/main/graph/badge.svg)](https://codecov.io/gh/mopeyjellyfish/KiwiCogs)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mopeyjellyfish/KiwiCogs)](https://img.shields.io/github/commit-activity/m/mopeyjellyfish/KiwiCogs)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/mopeyjellyfish/KiwiCogs/blob/main/.pre-commit-config.yaml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg)](https://github.com/mopeyjellyfish/KiwiCogs/releases)
 [![License](https://img.shields.io/github/license/mopeyjellyfish/KiwiCogs)](https://github.com/mopeyjellyfish/KiwiCogs/blob/main/LICENSE)
 
 </div>
