@@ -19,7 +19,6 @@ A simple and easy to use state machine library.
 - **Github repository**: <https://github.com/mopeyjellyfish/KiwiCogs/>
 - **Documentation** <https://mopeyjellyfish.github.io/KiwiCogs/>
 
-
 ## Installation
 
 ### Pip

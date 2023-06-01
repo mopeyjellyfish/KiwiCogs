@@ -1,4 +1,4 @@
-name: validate-codecov-config
+name: Validate codecov conf
 
 on:
   pull_request:
