@@ -31,28 +31,29 @@ poetry add kiwi-cogs
 Events can be used to transition between states, they can be used to trigger actions or to change the state of the machine. These events can be triggered externally from the machine when something happens.
 
 ```python
+import asyncio
 from kiwi_cogs import Machine
 
-light_config = {
-    "name": "lights",
-    "initial": "green",
-    "states": {
+config = {
+    "name": "lights", # the name of this machine
+    "initial": "green", # the initial state when the machine is created
+    "states": { # the possible states of the machine
         "green": {
-            "events": {"NEXT": {"target": "yellow"}},
+            "events": {"NEXT": {"target": "yellow"}}, # when this event is triggered, transition to yellow
         },
         "yellow": {"events": {"NEXT": {"target": "red"}}},
         "red": {"events": {"NEXT": {"target": "green"}}},
     },
 }
 
-light_machine await Machine.create(light_config)
-assert traffic_light.initial_state.value == "green"
-yellow_state = await traffic_light.event("NEXT")
-assert yellow_state.value == "yellow"
-red_state = await traffic_light.event("NEXT")
-assert red_state.value == "red"
-green_state = await traffic_light.event("NEXT")
-assert green_state.value == "green"
+async def run():
+    machine = await Machine.create(config)
+    for _ in range(10):
+        print(f"Light is: {machine.state.name}")
+        await machine.event("NEXT")
+
+
+asyncio.run(run())
 ```
 
 ### Transitions
