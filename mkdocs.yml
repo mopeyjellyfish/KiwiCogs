@@ -1,23 +1,28 @@
 site_name: kiwi-cogs
-repo_url: https://github.com/mopeyjellyfish/kiwi-cogs
-site_url: https://mopeyjellyfish.github.io/kiwi-cogs
+repo_url: https://github.com/mopeyjellyfish/KiwiCogs
+site_url: https://mopeyjellyfish.github.io/KiwiCogs
 site_description: A simple and easy to use state machine library
 site_author: David Hall
 edit_uri: edit/main/docs/
-repo_name: mopeyjellyfish/kiwi-cogs
+repo_name: mopeyjellyfish/KiwiCogs
 copyright: Maintained by <a href="https://mopeyjellyfish.com">Florian</a>.
 
 nav:
   - Home: index.md
+  - Examples:
+      - Tennis: examples/tennis.md
+      - Lights: examples/lights.md
+      - Hierarchical: examples/hierarchical.md
+
   - Modules: modules.md
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
-            setup_commands:
-                - import sys
-                - sys.path.append('../')
+          setup_commands:
+            - import sys
+            - sys.path.append('../')
 theme:
   name: material
   feature:
@@ -43,7 +48,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mopeyjellyfish/kiwi-cogs
+      link: https://github.com/mopeyjellyfish/KiwiCogs
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/kiwi-cogs
 
