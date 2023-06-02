@@ -263,8 +263,9 @@ class State(BaseModel):
         if self.state:  # noqa: SIM102
             # Go depth first to the last state
             if new_transition := await self.state.get_transition(context=context):
-                await self.on_exit(context=context)
-                await self.update_state(target=new_transition.target, context=context)  # type: ignore[arg-type]
+                if new_transition.target is not None:
+                    await self.on_exit(context=context)
+                    await self.update_state(target=new_transition.target, context=context)
 
         for transition in self.transitions:
             if asyncio.iscoroutinefunction(transition.cond):
