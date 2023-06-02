@@ -1,14 +1,12 @@
 [tool.poetry]
 name = "kiwi_cogs"
-version = "0.0.1"
+version = "0.1.2"
 description = "A simple and easy to use state machine library "
-authors = ["David Hall <fdev@davidhall.tech>"]
-repository = "https://github.com/mopeyjellyfish/kiwi-cogs"
-documentation = "https://mopeyjellyfish.github.io/kiwi-cogs/"
+authors = ["David Hall <dev@davidhall.tech>"]
+repository = "https://github.com/mopeyjellyfish/KiwiCogs/"
+documentation = "https://mopeyjellyfish.github.io/KiwiCogs/"
 readme = "README.md"
-packages = [
-  {include = "kiwi_cogs"}
-]
+packages = [{ include = "kiwi_cogs" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
@@ -27,7 +25,7 @@ greenlet = "^2.0.2"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
 mkdocs-material = "^8.5.10"
-mkdocstrings = {extras = ["python"], version = "^0.19.0"}
+mkdocstrings = { extras = ["python"], version = "^0.19.0" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -72,7 +70,8 @@ select = [
     # mccabe
     "C90",
     # pycodestyle
-    "E", "W",
+    "E",
+    "W",
     # pyflakes
     "F",
     # pygrep-hooks
@@ -103,10 +102,7 @@ source = ["kiwi_cogs"]
 concurrency = ["greenlet"]
 
 [tool.pytest.ini_options]
-asyncio_mode="auto"
+asyncio_mode = "auto"
 
 [tool.deptry]
-    extend_exclude = [
-        ".*/tests/",
-        "conftest.py"
-    ]
+extend_exclude = [".*/tests/", "conftest.py"]
