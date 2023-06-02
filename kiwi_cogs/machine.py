@@ -131,7 +131,7 @@ class Machine(BaseModel):
             state = self.state
 
         transition = await self.state.get_transition(context=self.context)  # type: ignore[union-attr , arg-type]
-        if transition:
+        if transition and transition.target is not None:
             await self.do_transition(transition.target)
             return await self.step()  # step through the new state
 

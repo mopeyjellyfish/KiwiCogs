@@ -48,7 +48,7 @@ class Transition(BaseModel):
     :type actions: List[Union[Callable, str]]
     """
 
-    target: Optional[str]
+    target: Optional[str] = None
     """The target state for this transition if the condition is met"""
     guards: Optional[Dict[str, Callable]]
     """Possible guards, which are callables"""

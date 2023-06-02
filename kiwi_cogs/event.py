@@ -9,9 +9,9 @@ from .transition import Transition
 class Event(BaseModel):
     name: Optional[str] = None
     """Name of the event"""
-    guards: Optional[Dict[str, Callable]]
+    guards: Optional[Dict[str, Callable]] = None
     """Possible guards, which are callables"""
-    actions: Optional[Dict[str, Callable]]
+    actions: Optional[Dict[str, Callable]] = None
     """Action side effects for the machine"""
     transitions: List[Transition]
 
