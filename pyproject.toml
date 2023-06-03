@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kiwi_cogs"
-version = "0.1.2"
+version = "0.1.3"
 description = "A simple and easy to use state machine library "
 authors = ["David Hall <dev@davidhall.tech>"]
 repository = "https://github.com/mopeyjellyfish/KiwiCogs/"
