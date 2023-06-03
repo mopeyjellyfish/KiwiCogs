@@ -264,6 +264,10 @@ async def test_bad_transient_transitions(bad_transient_machine):
         await bad_transient_machine.event("GO")
 
 
+async def test_update_config(game_machine: Machine):
+    assert game_machine.update_config({"context": {"points": 100}}) is None
+
+
 @fixture
 def multi_transition_event() -> dict:
     return {

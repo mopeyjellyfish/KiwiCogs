@@ -48,7 +48,7 @@ class Event(BaseModel):
             else:
                 action(context, event)
 
-    async def get_transition(self, context: dict, event: str) -> Optional[Transition]:
+    async def get_transition(self, context: dict, event: str) -> Optional[Transition]:  # type: ignore[return]
         """Return the next transition to take, if a condition is met
 
         :param context: The context of the system
@@ -64,5 +64,3 @@ class Event(BaseModel):
             if transition.cond(context, event):
                 await self.execute_actions(context=context, event=event, transition=transition)
                 return transition
-
-        return None

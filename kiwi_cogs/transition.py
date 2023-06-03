@@ -60,7 +60,7 @@ class Transition(BaseModel):
     """The condition for the transition"""
 
     @validator("actions", pre=True)
-    def build_actions(cls: "Transition", value: Union[Callable, List], values: Dict[str, Any]) -> List[Callable]:
+    def build_actions(cls: "Transition", value: Union[Callable, List], values: Dict[str, Any]) -> List[Callable]:  # type: ignore[return]
         """Builds the list of actions to be executed during the transition.
 
         :param value: A function or a list of functions that represent the actions to be executed during the transition.
@@ -77,10 +77,8 @@ class Transition(BaseModel):
         elif actions:
             return load_actions(value, actions)  # load the list of actions
 
-        return []
-
     @validator("cond", pre=True)
-    def build_cond(cls: "Transition", value: Union[Callable, str], values: Dict[str, Any]) -> Optional[Callable]:
+    def build_cond(cls: "Transition", value: Union[Callable, str], values: Dict[str, Any]) -> Optional[Callable]:  # type: ignore[return]
         """Builds the cond value for a transition
 
         :param value: the condition callable / str
@@ -99,7 +97,3 @@ class Transition(BaseModel):
                 raise UnknownGuard(f"Unknown action '{value} - expected one of: {', '.join(guards.keys())}'")
             elif callable(guard):
                 return guard  # type: ignore[no-any-return]
-            else:
-                return ALWAYS
-
-        return ALWAYS

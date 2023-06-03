@@ -19,7 +19,7 @@ check: ## Run code quality tools.
 .PHONY: test
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
-	@poetry run pytest --cov --cov-config=pyproject.toml --cov-report=xml
+	@poetry run pytest --cov --cov-config=pyproject.toml --cov-report=xml --cov-report=term-missing
 
 .PHONY: build
 build: clean-build ## Build wheel file using poetry

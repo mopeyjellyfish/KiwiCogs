@@ -94,7 +94,6 @@ class Machine(BaseModel):
         :param config: The configuration to update the instance with.
         :type config: dict
         """
-        return None
 
     async def event(self, event: str) -> State:
         """Transitions the machine by executing an event

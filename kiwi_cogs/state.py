@@ -250,7 +250,7 @@ class State(BaseModel):
 
         return None
 
-    async def get_transition(self, context: dict) -> Optional[Transition]:
+    async def get_transition(self, context: dict) -> Optional[Transition]:  # type: ignore[return]
         """Check the conditions for each transition of the given state
 
         :param context: A dictionary that contains the current context of the system
@@ -275,5 +275,3 @@ class State(BaseModel):
 
             if condition:
                 return transition
-
-        return None
