@@ -259,6 +259,10 @@ async def test_game_machine(game_machine: Machine):
     assert game_machine.state.value == "win"
 
 
+async def test_game_machine_unknown_event(game_machine: Machine):
+    await game_machine.event("UNKNOWN")
+
+
 async def test_bad_transient_transitions(bad_transient_machine):
     with raises(UnknownTarget):
         await bad_transient_machine.event("GO")
